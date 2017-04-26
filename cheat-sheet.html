@@ -112,6 +112,34 @@ And then some more.</p>
         </tr>
 
         <tr>
+          <th>Lists</th>
+          <td>
+            <pre>
+&lt;ul&gt;
+  &lt;li&gt;unordered&lt;/li&gt;
+  &lt;li&gt;list&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;numbered&lt;/li&gt;
+  &lt;li&gt;list&lt;/li&gt;
+&lt;/ol&gt;
+            </pre>
+          </td>
+          <td>
+<ul>
+  <li>unordered</li>
+  <li>list</li>
+</ul>
+
+<ol>
+  <li>numbered</li>
+  <li>list</li>
+</ol>
+          </td>
+        </tr>
+
+        <tr>
           <th>Text styles</th>
           <td>
             <pre>
@@ -352,9 +380,9 @@ function show_comment() {
   &lt;head&gt;
     &lt;script&gt;
 function add_text() {
-  <em>text_box = document.getElementById('text_box');</em>
+  <em>comment_list = document.getElementById('comment_list');</em>
   comment = document.getElementById('comment');
-  text_box<em>.innerHTML</em> += '&lt;p&gt;' + comment.value + '&lt;/p&gt;';
+  comment_list<em>.innerHTML</em> += '&lt;li&gt;' + comment.value + '&lt;/li&gt;';
   <em>comment.value = '';</em>
 }
     &lt;/script&gt;
@@ -362,9 +390,9 @@ function add_text() {
   &lt;body&gt;
     &lt;input id="comment" type="text" /&gt;
     &lt;button onclick="show_comment()"&gt;show&lt;/button&gt;
-    &lt;div <em>id="text_box"</em>&gt;
-      &lt;p&gt;first comment&lt;/p&gt;
-    &lt;/div&gt;
+    &lt;ul <em>id="comment_list"</em>&gt;
+      &lt;li&gt;first comment&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/body&gt;
 &lt;/html&gt;
             </pre>
@@ -373,14 +401,14 @@ function add_text() {
     <script>
 function add_text() {
   comment = document.getElementById('comment2');
-  text_box = document.getElementById('text_box');
-  text_box.innerHTML += '<p>' + comment.value + '</p>';
+  comment_list = document.getElementById('comment_list');
+  comment_list.innerHTML += '<li>' + comment.value + '</li>';
   comment.value = '';
 }
     </script>
     <input id="comment2" type="text" />
     <button onclick="add_text()">show</button>
-    <div id="text_box"><p>first comment</p></div>
+    <ul id="comment_list"><li>first comment</li></ul>
           </td>
         </tr>
       </tbody>
