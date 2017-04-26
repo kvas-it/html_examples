@@ -1,0 +1,420 @@
+<html>
+  <head>
+    <style>
+body {
+  background-color: SteelBlue;
+  color: white;
+  margin: 10pt;
+}
+
+body>h1, body>h2, th {
+  font-family: Arial;
+}
+
+tbody th {
+  text-align: right;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 6pt 10pt;
+  color: black;
+  vertical-align: top;
+}
+
+td {
+  background-color: white;
+}
+
+th {
+  background-color: LightGrey;
+}
+
+pre em {
+  font-style: normal;
+  color: blue;
+}
+    </style>
+  </head>
+  <body>
+    <h1>HTML cheat sheet</h1>
+
+    <h2>Basic HTML</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <th>Source code</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Simple page</th>
+          <td>
+            <pre>
+&lt;html&gt;
+  &lt;body&gt;
+  Hello world!
+  &lt;body&gt;
+&lt;html&gt;
+            </pre>
+          </td>
+          <td>
+Hello world!
+          </td>
+        </tr>
+
+        <tr>
+          <th>Headings</th>
+          <td>
+            <pre>
+&lt;h1&gt;Big&lt;/h1&gt;
+&lt;h2&gt;Smaller&lt;/h2&gt;
+&lt;h3&gt;Even smaller&lt;/h3&gt;
+&lt;h4&gt;Even smaller&lt;/h4&gt;
+            </pre>
+          </td>
+          <td>
+<h1>Big</h1>
+<h2>Smaller</h2>
+<h3>Even smaller</h3>
+<h4>Tiny</h4>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Paragraphs</th>
+          <td>
+            <pre>
+&lt;p&gt;Some text.
+And then some more.&lt;/p&gt;
+
+&lt;p&gt;Another paragraph.&lt;/p&gt;
+
+&lt;p&gt;Paragraph with&lt;br/&gt;a line break&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<p>Some text.
+And then some more.</p>
+
+<p>Another paragraph.</p>
+
+<p>Paragraph with<br/>a line break</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Text styles</th>
+          <td>
+            <pre>
+&lt;b&gt;This is bold.&lt;/b&gt;
+&lt;i&gt;And this is italicized.&lt;/i&gt;
+            </pre>
+          </td>
+          <td>
+<b>This is bold.</b>
+<i>And this is italicized.</i>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Images</th>
+          <td>
+            <pre>
+&lt;img src="image_of_a_cat.jpg"
+     width="300" height="200"
+     title="A cat" /&gt;
+            </pre>
+          </td>
+          <td>
+<img src="image_of_a_cat.jpg"
+     width="300" height="200"
+     title="A cat" />
+          </td>
+        </tr>
+
+        <tr>
+          <th>Links</th>
+          <td>
+            <pre>
+This &lt;a href="https://www.google.com/"&gt;link&lt;/a&gt; goes to Google.
+            </pre>
+          </td>
+          <td>
+This <a href="https://www.google.com/">link</a> goes to Google.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Styling HTML with CSS</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <th>Source code</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Colors</th>
+          <td>
+            <pre>
+&lt;h2 <em>style="color: red"</em>&gt;This heading is red.&lt;/h2&gt;
+
+&lt;p <em>style="color: blue"</em>&gt;
+This text is blue.
+&lt;span <em>style="color: rgb(0, 255, 128)"</em>&gt;green&lt;/span&gt;
+Blue again.
+&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<h2 style="color: red">This heading is red.</h2>
+
+<p style="color: blue">
+This text is blue.
+<span style="color: rgb(0, 255, 128)">green</span>
+Blue again.
+</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Background</th>
+          <td>
+            <pre>
+&lt;p <em>style="background-color: pink"</em>&gt;
+This paragraph has pink background.
+&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<p style="background-color: pink">
+This paragraph has pink background.
+</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Fonts</th>
+          <td>
+            <pre>
+&lt;p <em>style="font-family: Arial"</em>&gt;
+This paragraph has another font.
+&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<p style="font-family: Arial">
+This paragraph has another font.
+</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Style sheet</th>
+          <td>
+            <pre>
+&lt;html&gt;
+  &lt;head&gt;<em>
+    &lt;style&gt;
+body {
+  font-family: Arial;
+  background-color: rgb(200, 200, 255);
+}
+
+p {
+  color: grey;
+}
+
+h1 {
+  font-size: 150%;
+}
+    &lt;/style&gt;</em>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Nice tidy page&lt;/h1&gt;
+    &lt;p&gt;We don't like colors.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+          </td>
+          <td style="font-family: Arial; background-color: rgb(200, 200, 255)">
+<h1 style="font-size: 150%">Nice tidy page</h1>
+<p style="color: grey">We don't like colors.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Interactive elements</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <th>Source code</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>A form</th>
+          <td>
+            <pre>
+&lt;p&gt;Input <em>&lt;input type="text" /&gt;</em>&lt;/p&gt;
+
+&lt;p&gt;
+  Text box
+  <em>&lt;textarea&gt;&lt;/textarea&gt;</em>
+&lt;/p&gt;
+
+&lt;p&gt;
+  <em>&lt;button&gt;A button&lt;/button&gt;</em>
+&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<p>Input <input type="text" /></p>
+
+<p>
+  Text box
+  <textarea></textarea>
+</p>
+
+<p>
+<button>A button</button>
+</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>A button with a script</th>
+          <td>
+            <pre>
+&lt;button <em>onclick="alert('hello!')"</em>/&gt;Press me&lt;/button&gt;
+            </pre>
+          </td>
+          <td>
+<button onclick="alert('hello!')"/>Press me</button>
+          </td>
+        </tr>
+
+        <tr>
+          <th>A script in the head<br/>
+             (get user input from a form field)</th>
+          <td>
+            <pre>
+&lt;html&gt;
+  &lt;head&gt;
+    <em>&lt;script&gt;
+function show_comment() {
+  comment = document.getElementById('comment');
+  alert(comment.value);
+}
+    &lt;/script&gt;</em>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input <em>id="comment"</em> type="text" /&gt;
+    &lt;button <em>onclick="show_comment()"</em>&gt;show&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+          </td>
+          <td>
+    <script>
+function show_comment() {
+  comment = document.getElementById('comment');
+  alert(comment.value);
+}
+    </script>
+    <input id="comment" type="text" />
+    <button onclick="show_comment()">show</button>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Modify content of the page</th>
+          <td>
+            <pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script&gt;
+function add_text() {
+  <em>text_box = document.getElementById('text_box');</em>
+  comment = document.getElementById('comment');
+  text_box<em>.innerHTML</em> += '&lt;p&gt;' + comment.value + '&lt;/p&gt;';
+  <em>comment.value = '';</em>
+}
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input id="comment" type="text" /&gt;
+    &lt;button onclick="show_comment()"&gt;show&lt;/button&gt;
+    &lt;div <em>id="text_box"</em>&gt;
+      &lt;p&gt;first comment&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+          </td>
+          <td>
+    <script>
+function add_text() {
+  comment = document.getElementById('comment2');
+  text_box = document.getElementById('text_box');
+  text_box.innerHTML += '<p>' + comment.value + '</p>';
+  comment.value = '';
+}
+    </script>
+    <input id="comment2" type="text" />
+    <button onclick="add_text()">show</button>
+    <div id="text_box"><p>first comment</p></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Fancy stuff</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <th>Source code</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Embedding other websites</th>
+          <td>
+            <pre>
+&lt;iframe width="300" height="200"
+  src="https://www.youtube.com/embed/DLzxrzFCyOs"&gt;
+&lt;/iframe&gt;
+            </pre>
+          </td>
+          <td>
+<iframe width="300" height="200"
+  src="https://www.youtube.com/embed/DLzxrzFCyOs">
+</iframe>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </body>
+</html>
+
