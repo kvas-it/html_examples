@@ -1,0 +1,449 @@
+<html>
+  <head>
+    <meta charset="utf8">
+    <style>
+body {
+  background-color: SteelBlue;
+  color: white;
+  margin: 10pt;
+}
+
+body>h1, body>h2, th {
+  font-family: Arial;
+}
+
+tbody th {
+  text-align: right;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 6pt 10pt;
+  color: black;
+  vertical-align: top;
+}
+
+td {
+  background-color: white;
+}
+
+th {
+  background-color: LightGrey;
+}
+
+pre em {
+  font-style: normal;
+  color: blue;
+}
+    </style>
+  </head>
+  <body>
+    <h1>HTML Cheat Sheet</h1>
+
+    <h2>HTML Grundlagen</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <th>Quellcode</th>
+          <th>Ergebnis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Einfache Seite</th>
+          <td>
+            <pre>
+&lt;html&gt;
+  &lt;body&gt;
+  Hello world!
+  &lt;body&gt;
+&lt;html&gt;
+            </pre>
+          </td>
+          <td>
+Hallo Welt!
+          </td>
+        </tr>
+
+        <tr>
+          <th>Überschriften</th>
+          <td>
+            <pre>
+&lt;h1&gt;Groß&lt;/h1&gt;
+&lt;h2&gt;Kleiner&lt;/h2&gt;
+&lt;h3&gt;Noch kleiner&lt;/h3&gt;
+&lt;h4&gt;Winzig&lt;/h4&gt;
+            </pre>
+          </td>
+          <td>
+<h1>Groß</h1>
+<h2>Kleiner</h2>
+<h3>Noch kleiner</h3>
+<h4>Winzig</h4>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Paragraphen</th>
+          <td>
+            <pre>
+&lt;p&gt;Hier ist Text.
+Und hier noch mehr davon.&lt;/p&gt;
+
+&lt;p&gt;Noch ein Paragraph.&lt;/p&gt;
+
+&lt;p&gt;Paragraph mit&lt;br/&gt;einem Zeilenumbruch&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<p>Hier ist Text.
+Und hier noch mehr davon.</p>
+
+<p>Noch ein Paragraph.</p>
+
+<p>Paragraph mit<br/>einem Zeilenumbruch</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Lists</th>
+          <td>
+            <pre>
+&lt;ul&gt;
+  &lt;li&gt;unsortierte&lt;/li&gt;
+  &lt;li&gt;Liste&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;nummerierte&lt;/li&gt;
+  &lt;li&gt;Liste&lt;/li&gt;
+&lt;/ol&gt;
+            </pre>
+          </td>
+          <td>
+<ul>
+  <li>unsortierte</li>
+  <li>Liste</li>
+</ul>
+
+<ol>
+  <li>nummerierte</li>
+  <li>Liste</li>
+</ol>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Text Stile</th>
+          <td>
+            <pre>
+&lt;b&gt;Das ist fett.&lt;/b&gt;
+&lt;i&gt;Das ist kursiv.&lt;/i&gt;
+            </pre>
+          </td>
+          <td>
+<b>Das ist fett.</b>
+<i>Das ist kursiv.</i>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Bilder</th>
+          <td>
+            <pre>
+&lt;img src="image_of_a_cat.jpg"
+     width="300" height="200"
+     title="Eine Katze" /&gt;
+            </pre>
+          </td>
+          <td>
+<img src="image_of_a_cat.jpg"
+     width="300" height="200"
+     title="Eine Katze" />
+          </td>
+        </tr>
+
+        <tr>
+          <th>Links</th>
+          <td>
+            <pre>
+Dieser &lt;a href="https://www.google.com/"&gt;Link&lt;/a&gt; führt zu Google.
+            </pre>
+          </td>
+          <td>
+Dieser <a href="https://www.google.com/">Link</a> führt zu Google.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>HTML mit CSS verschönern</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <th>Quellcode</th>
+          <th>Ergebnis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Farben</th>
+          <td>
+            <pre>
+&lt;h2 <em>style="color: red"</em>&gt;Diese Überschrift ist rot.&lt;/h2&gt;
+
+&lt;p <em>style="color: blue"</em>&gt;
+Dieser Text ist blau.
+&lt;span <em>style="color: rgb(0, 255, 128)"</em>&gt;grün&lt;/span&gt;
+Blau nochmal.
+&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<h2 style="color: red">Diese Überschrift ist rot.</h2>
+
+<p style="color: blue">
+Dieser Text ist blau.
+<span style="color: rgb(0, 255, 128)">grün</span>
+Blau nochmal.
+</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Hintergrund</th>
+          <td>
+            <pre>
+&lt;p <em>style="background-color: pink"</em>&gt;
+Dieser Paragraph hat einen pinken Hintergrund.
+&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<p style="background-color: pink">
+Dieser Paragraph hat einen pinken Hintergrund.
+</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Schriftarten</th>
+          <td>
+            <pre>
+&lt;p <em>style="font-family: Arial"</em>&gt;
+Dieser Paragraph ist in einer anderen Schriftart.
+&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<p style="font-family: Arial">
+Dieser Paragraph ist in einer anderen Schriftart.
+</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Style Sheet</th>
+          <td>
+            <pre>
+&lt;html&gt;
+  &lt;head&gt;<em>
+    &lt;style&gt;
+body {
+  font-family: Arial;
+  background-color: rgb(200, 200, 255);
+}
+
+p {
+  color: grey;
+}
+
+h1 {
+  font-size: 150%;
+}
+    &lt;/style&gt;</em>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Gut aufgeräumte Seite&lt;/h1&gt;
+    &lt;p&gt;Wir mögen keine Farben.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+          </td>
+          <td style="font-family: Arial; background-color: rgb(200, 200, 255)">
+<h1 style="font-size: 150%">Gut aufgeräumte Seite</h1>
+<p style="color: grey">Wir mögen keine Farben.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Interaktive Elemente</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <th>Quelltext</th>
+          <th>Ergebnis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Ein Formular</th>
+          <td>
+            <pre>
+&lt;p&gt;Eingabe <em>&lt;input type="text" /&gt;</em>&lt;/p&gt;
+
+&lt;p&gt;
+  Text Box
+  <em>&lt;textarea&gt;&lt;/textarea&gt;</em>
+&lt;/p&gt;
+
+&lt;p&gt;
+  <em>&lt;button&gt;Ein Button&lt;/button&gt;</em>
+&lt;/p&gt;
+            </pre>
+          </td>
+          <td>
+<p>Eingabe <input type="text" /></p>
+
+<p>
+  Text Box
+  <textarea></textarea>
+</p>
+
+<p>
+<button>Ein Button</button>
+</p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Ein Button mit einem Skript</th>
+          <td>
+            <pre>
+&lt;button <em>onclick="alert('Hallo!')"</em>/&gt;Klick mich&lt;/button&gt;
+            </pre>
+          </td>
+          <td>
+<button onclick="alert('Hallo!')"/>Klick mich</button>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Ein Skript im Seitenkopf<br/>
+             (Nutzereingabe aus einem Formularfeld holen)</th>
+          <td>
+            <pre>
+&lt;html&gt;
+  &lt;head&gt;
+    <em>&lt;script&gt;
+function showComment() {
+  comment = document.getElementById("comment");
+  alert(comment.value);
+}
+    &lt;/script&gt;</em>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input <em>id="comment"</em> type="text" /&gt;
+    &lt;button <em>onclick="showComment()"</em>&gt;anzeigen&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+          </td>
+          <td>
+    <script>
+function showComment() {
+  comment = document.getElementById("comment");
+  alert(comment.value);
+}
+    </script>
+    <input id="comment" type="text" />
+    <button onclick="showComment()">anzeigen</button>
+          </td>
+        </tr>
+
+        <tr>
+          <th>Seiteninhalt verändern</th>
+          <td>
+            <pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script&gt;
+function addText() {
+  <em>comment_list = document.getElementById("comment_list");</em>
+  comment = document.getElementById("comment");
+  comment_list<em>.innerHTML</em> += "&lt;li&gt;" + comment.value + "&lt;/li&gt;";
+  <em>comment.value = "";</em>
+}
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input id="comment" type="text" /&gt;
+    &lt;button onclick="show_comment()"&gt;anzeigen&lt;/button&gt;
+    &lt;ul <em>id="comment_list"</em>&gt;
+      &lt;li&gt;erstes Kommentar&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+          </td>
+          <td>
+    <script>
+function addText() {
+  comment = document.getElementById("comment2");
+  comment_list = document.getElementById("comment_list");
+  comment_list.innerHTML += "<li>" + comment.value + "</li>";
+  comment.value = "";
+}
+    </script>
+    <input id="comment2" type="text" />
+    <button onclick="addText()">anzeigen</button>
+    <ul id="comment_list"><li>erstes Kommentar</li></ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Schickes Zeug</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <th>Quellcode</th>
+          <th>Ergebnis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Andere Webseiten einbetten</th>
+          <td>
+            <pre>
+&lt;iframe width="300" height="200"
+  src="https://www.youtube.com/embed/DLzxrzFCyOs"&gt;
+&lt;/iframe&gt;
+            </pre>
+          </td>
+          <td>
+<iframe width="300" height="200"
+  src="https://www.youtube.com/embed/DLzxrzFCyOs">
+</iframe>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </body>
+</html>
+
