@@ -3,8 +3,7 @@
     <meta charset="utf8">
     <style>
 body {
-  background-color: SteelBlue;
-  color: white;
+  color: black;
   margin: 10pt;
 }
 
@@ -32,6 +31,14 @@ td {
   background-color: white;
 }
 
+td.hdr {
+  border: none;
+  text-align: center;
+  font-size: 150%;
+  font-family: Arial;
+  font-weight: bold;
+}
+
 th {
   background-color: LightGrey;
 }
@@ -45,8 +52,6 @@ pre em {
   <body>
     <h1>HTML Cheat Sheet</h1>
 
-    <h2>HTML Grundlagen</h2>
-
     <table>
       <thead>
         <tr>
@@ -56,6 +61,9 @@ pre em {
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td class="hdr" colspan="3">HTML Grundlagen</td>
+        </tr>
         <tr>
           <th>Einfache Seite</th>
           <td>
@@ -179,20 +187,9 @@ Dieser &lt;a href="https://www.google.com/"&gt;Link&lt;/a&gt; führt zu Google.
 Dieser <a href="https://www.google.com/">Link</a> führt zu Google.
           </td>
         </tr>
-      </tbody>
-    </table>
-
-    <h2>HTML mit CSS verschönern</h2>
-
-    <table>
-      <thead>
         <tr>
-          <td></td>
-          <th>Quellcode</th>
-          <th>Ergebnis</th>
+          <td class="hdr" colspan="3">HTML mit CSS verschönern</td>
         </tr>
-      </thead>
-      <tbody>
         <tr>
           <th>Farben</th>
           <td>
@@ -276,20 +273,9 @@ h1 { font-size: 150%; }
 <p>Wir mögen keine Farben.</p>
           </td>
         </tr>
-      </tbody>
-    </table>
-
-    <h2>Interaktive Elemente</h2>
-
-    <table>
-      <thead>
         <tr>
-          <td></td>
-          <th>Quelltext</th>
-          <th>Ergebnis</th>
+          <td class="hdr" colspan="3">Interaktive Elemente</td>
         </tr>
-      </thead>
-      <tbody>
         <tr>
           <th>Ein Formular</th>
           <td>
@@ -404,20 +390,9 @@ function addText() {
     <ul id="comment_list"><li>erstes Kommentar</li></ul>
           </td>
         </tr>
-      </tbody>
-    </table>
-
-    <h2>Schickes Zeug</h2>
-
-    <table>
-      <thead>
         <tr>
-          <td></td>
-          <th>Quellcode</th>
-          <th>Ergebnis</th>
+          <td class="hdr" colspan="3">Schickes Zeug</td>
         </tr>
-      </thead>
-      <tbody>
         <tr>
           <th>Andere Webseiten einbetten</th>
           <td>
@@ -438,4 +413,3 @@ function addText() {
 
   </body>
 </html>
-

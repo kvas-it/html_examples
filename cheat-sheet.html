@@ -2,8 +2,7 @@
   <head>
     <style>
 body {
-  background-color: SteelBlue;
-  color: white;
+  color: black;
   margin: 10pt;
 }
 
@@ -31,6 +30,14 @@ td {
   background-color: white;
 }
 
+td.hdr {
+  border: none;
+  text-align: center;
+  font-size: 150%;
+  font-family: Arial;
+  font-weight: bold;
+}
+
 th {
   background-color: LightGrey;
 }
@@ -44,8 +51,6 @@ pre em {
   <body>
     <h1>HTML cheat sheet</h1>
 
-    <h2>Basic HTML</h2>
-
     <table>
       <thead>
         <tr>
@@ -55,6 +60,9 @@ pre em {
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td class="hdr" colspan="3">Basic HTML</td>
+        </tr>
         <tr>
           <th>Simple page</th>
           <td>
@@ -178,20 +186,9 @@ This &lt;a href="https://www.google.com/"&gt;link&lt;/a&gt; goes to Google.
 This <a href="https://www.google.com/">link</a> goes to Google.
           </td>
         </tr>
-      </tbody>
-    </table>
-
-    <h2>Styling HTML with CSS</h2>
-
-    <table>
-      <thead>
         <tr>
-          <td></td>
-          <th>Source code</th>
-          <th>Result</th>
+          <td class="hdr" colspan="3">Styling HTML with CSS</td>
         </tr>
-      </thead>
-      <tbody>
         <tr>
           <th>Colors</th>
           <td>
@@ -275,20 +272,9 @@ h1 { font-size: 150%; }
 <p>We don't like colors.</p>
           </td>
         </tr>
-      </tbody>
-    </table>
-
-    <h2>Interactive elements</h2>
-
-    <table>
-      <thead>
         <tr>
-          <td></td>
-          <th>Source code</th>
-          <th>Result</th>
+          <td class="hdr" colspan="3">Interactive elements</td>
         </tr>
-      </thead>
-      <tbody>
         <tr>
           <th>A form</th>
           <td>
@@ -403,20 +389,9 @@ function add_text() {
     <ul id="comment_list"><li>first comment</li></ul>
           </td>
         </tr>
-      </tbody>
-    </table>
-
-    <h2>Fancy stuff</h2>
-
-    <table>
-      <thead>
         <tr>
-          <td></td>
-          <th>Source code</th>
-          <th>Result</th>
+          <td class="hdr" colspan="3">Fancy stuff</td>
         </tr>
-      </thead>
-      <tbody>
         <tr>
           <th>Embed videos</th>
           <td>
